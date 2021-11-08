@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".StartActivity"
+    android:background="@drawable/background2">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/btn_startGame"
+        android:layout_centerHorizontal="true"
+        android:fontFamily="sans-serif-thin"
+        android:padding="30dp"
+        android:paddingTop="40dp"
+        android:text="Fairy Race"
+        android:textColor="#D8FBFBFB"
+        android:textSize="70dp"
+        android:textStyle="bold" />
+
+    <ImageView
+        android:id="@+id/btn_startGame"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_centerInParent="true"
+        android:onClick="clickToStart"
+        android:src="@drawable/resume" />
+
+
+
+</RelativeLayout>

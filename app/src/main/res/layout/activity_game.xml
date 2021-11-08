@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".GameActivity"
+    android:id="@+id/rl"
+    android:background="@drawable/game_background"
+    android:paddingBottom="10dp">
+
+    <ImageView
+        android:id="@+id/life_status1"
+        android:layout_width="24dp"
+        android:layout_height="40dp"
+        android:layout_margin="3dp"
+        android:layout_alignParentLeft="true"
+        android:src="@drawable/like"
+
+        />
+    <ImageView
+        android:id="@+id/life_status2"
+        android:layout_width="24dp"
+        android:layout_height="40dp"
+        android:src="@drawable/like"
+        android:layout_margin="3dp"
+        android:layout_toRightOf="@id/life_status1"
+        />
+    <ImageView
+        android:id="@+id/life_status3"
+        android:layout_width="24dp"
+        android:layout_height="40dp"
+        android:src="@drawable/like"
+        android:layout_margin="3dp"
+        android:layout_toRightOf="@id/life_status2"
+        />
+
+    <TextView
+        android:id="@+id/score_view"
+        android:layout_width="170dp"
+        android:layout_height="30dp"
+        android:layout_marginLeft="3dp"
+        android:layout_marginTop="4dp"
+        android:layout_toRightOf="@id/life_status3"
+        android:text="SCORE:"
+        android:textColor="@android:color/white"
+        android:textSize="24dp" />
+
+
+    <ImageView
+        android:id="@+id/btn_stop"
+        android:src="@drawable/stop"
+        android:layout_width="50dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="3dp"
+        android:onClick="clickToStop"
+        android:layout_alignParentRight="true"/>
+    <ImageView
+        android:id="@+id/btn_pause"
+        android:src="@drawable/pause"
+        android:layout_width="50dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="3dp"
+        android:onClick="clickToPause"
+        android:layout_toLeftOf="@id/btn_stop"/>
+    <ImageView
+        android:id="@+id/btn_resume"
+        android:src="@drawable/resume"
+        android:layout_width="50dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="3dp"
+        android:layout_toLeftOf="@id/btn_pause"
+        android:onClick="clickToResume"/>
+
+
+    <LinearLayout
+        android:id="@+id/main_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:layout_below="@id/btn_stop"
+        android:layout_above="@id/move_left"
+        android:weightSum="3"
+        >
+        <LinearLayout
+            android:id="@+id/linear1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_below="@id/btn_stop"
+            android:layout_above="@id/move_left"
+            android:layout_weight="1"
+            >
+            <ImageView
+                android:id="@+id/enemy1"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:src="@drawable/flame"
+
+            />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linear2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@id/move_left"
+            android:layout_below="@id/btn_stop"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/enemy2"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:src="@drawable/flame" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linear3"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_below="@id/btn_stop"
+            android:layout_above="@id/move_left"
+            android:layout_weight="1"
+            >
+            <ImageView
+                android:id="@+id/enemy3"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:src="@drawable/flame"
+                />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/move_left"
+        android:layout_width="60dp"
+        android:layout_height="70dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentBottom="true"
+        android:onClick="clickToMoveLeft"
+        android:src="@drawable/left_arrow" />
+
+    <ImageView
+        android:id="@+id/move_right"
+        android:layout_width="60dp"
+        android:layout_height="70dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:onClick="clickToMoveRight"
+        android:src="@drawable/right_arrow" />
+
+
+    <ImageView
+        android:id="@+id/player"
+        android:layout_width="50dp"
+        android:layout_height="60dp"
+        android:layout_above="@id/move_right"
+        android:layout_centerInParent="true"
+        android:src="@drawable/fairy" />
+
+
+
+
+</RelativeLayout>
