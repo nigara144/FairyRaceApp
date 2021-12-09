@@ -6,17 +6,63 @@
     tools:context=".EndActivity"
     android:background="@drawable/background2">
 
+    <RelativeLayout
+        android:id="@+id/loadingPanel"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center">
+
+        <ProgressBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:indeterminate="true" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/game_over"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="GAME OVER"
+        android:layout_marginTop="100dp"
+        android:textColor="@android:color/white"
+        android:textSize="50dp"
+        android:layout_centerHorizontal="true"/>
+
     <TextView
         android:id="@+id/your_score"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="80dp"
+        android:layout_below="@id/game_over"
         android:layout_centerHorizontal="true"
-        android:text="YOUR SCORE :"
-        android:textStyle="bold"
+        android:layout_marginTop="80dp"
         android:fontFamily="sans-serif-thin"
+        android:text="YOUR SCORE :"
         android:textColor="@android:color/holo_blue_dark"
-        android:textSize="30dp"/>
+        android:textSize="30dp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/btn_menu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Menu"
+        android:textSize="30dp"
+        android:textColor="@android:color/white"
+        android:fontFamily="sans-serif-thin"
+        android:layout_centerInParent="true"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:id="@+id/btn_high_scores"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="High Scores"
+        android:layout_below="@id/btn_menu"
+        android:textSize="30dp"
+        android:textColor="@android:color/white"
+        android:fontFamily="sans-serif-thin"
+        android:layout_centerInParent="true"
+        android:textStyle="bold"/>
 
     <TextView
         android:id="@+id/btn_restart"
@@ -24,23 +70,22 @@
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
         android:fontFamily="sans-serif-thin"
-        android:onClick="clickToRestart"
         android:text="Restart"
+        android:layout_below="@id/btn_high_scores"
         android:textColor="@android:color/white"
-        android:textSize="35dp"
+        android:textSize="30dp"
         android:textStyle="bold" />
 
     <TextView
+        android:id="@+id/btn_quit"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/btn_restart"
         android:layout_centerInParent="true"
-        android:layout_marginTop="10dp"
         android:fontFamily="sans-serif-thin"
-        android:onClick="clickExit"
         android:text="Quit"
         android:textColor="@android:color/white"
-        android:textSize="35dp"
+        android:textSize="30dp"
         android:textStyle="bold" />
 
 </RelativeLayout>

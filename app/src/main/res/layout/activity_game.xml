@@ -79,7 +79,7 @@
         android:orientation="horizontal"
         android:layout_below="@id/btn_stop"
         android:layout_above="@id/move_left"
-        android:weightSum="3"
+        android:weightSum="5"
         >
         <LinearLayout
             android:id="@+id/linear1"
@@ -95,8 +95,14 @@
                 android:layout_width="match_parent"
                 android:layout_height="60dp"
                 android:src="@drawable/flame"
-
             />
+            <ImageView
+                android:id="@+id/coin1"
+                android:layout_width="match_parent"
+                android:layout_height="130px"
+                android:src="@drawable/coin"
+
+                />
         </LinearLayout>
 
         <LinearLayout
@@ -113,6 +119,13 @@
                 android:layout_width="match_parent"
                 android:layout_height="60dp"
                 android:src="@drawable/flame" />
+            <ImageView
+                android:id="@+id/coin2"
+                android:layout_width="match_parent"
+                android:layout_height="130px"
+                android:src="@drawable/coin"
+
+                />
         </LinearLayout>
 
         <LinearLayout
@@ -129,6 +142,61 @@
                 android:layout_width="match_parent"
                 android:layout_height="60dp"
                 android:src="@drawable/flame"
+                />
+            <ImageView
+                android:id="@+id/coin3"
+                android:layout_width="match_parent"
+                android:layout_height="130px"
+                android:src="@drawable/coin"
+
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linear4"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_below="@id/btn_stop"
+            android:layout_above="@id/move_left"
+            android:layout_weight="1"
+            >
+            <ImageView
+                android:id="@+id/enemy4"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:src="@drawable/flame"
+                />
+            <ImageView
+                android:id="@+id/coin4"
+                android:layout_width="match_parent"
+                android:layout_height="130px"
+                android:src="@drawable/coin"
+
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linear5"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_below="@id/btn_stop"
+            android:layout_above="@id/move_left"
+            android:layout_weight="1"
+            >
+            <ImageView
+                android:id="@+id/enemy5"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:src="@drawable/flame"
+                />
+            <ImageView
+                android:id="@+id/coin5"
+                android:layout_width="match_parent"
+                android:layout_height="130px"
+                android:src="@drawable/coin"
+
                 />
         </LinearLayout>
 
@@ -160,8 +228,5 @@
         android:layout_above="@id/move_right"
         android:layout_centerInParent="true"
         android:src="@drawable/fairy" />
-
-
-
 
 </RelativeLayout>
